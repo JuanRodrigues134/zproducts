@@ -1,7 +1,36 @@
-<mvc:View controllerName="com.udo.zproducts2.controller.Home"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-        <content />
+<mvc:View
+    controllerName="com.udo.zproducts2.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <Table items="{/Products}">
+                <columns>
+                    <Column>
+                        <Text text="{i18n>tableColumnProductId}" />
+                    </Column>
+                    <Column>
+                        <Text text="{i18n>tableColumnProductName}" />
+                    </Column>
+                    <Column>
+                        <Text text="{i18n>tableColumnProductQuantityPerUnit}" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{ProductID}" />
+                            <Text text="{ProductName}" />
+                            <Text text="{QuantityPerUnit}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
     </Page>
 </mvc:View>

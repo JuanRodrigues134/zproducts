@@ -1,15 +1,12 @@
-sap.ui.define([
-    "sap/ui/core/mvc/Controller"
-],
-    /**
-     * @param {typeof sap.ui.core.mvc.Controller} Controller
-     */
-    function (Controller) {
-        "use strict";
+sap.ui.define(
+  ["com/udo/zproducts2/controller/BaseController"],
+  function (BaseController) {
+    "use strict";
 
-        return Controller.extend("com.udo.zproducts2.controller.Home", {
-            onInit: function () {
-
-            }
-        });
+    return BaseController.extend("com.udo.zproducts2.controller.Home", {
+      onInit: function () {
+        this.getResourceBundle().getText("tableColumnProductId");
+      },
     });
+  }
+);
